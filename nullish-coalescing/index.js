@@ -4,10 +4,11 @@ const response = {
 
 // console.log(response.dog.name); // Uncaught TypeError: Cannot read property 'name' of undefined
 
+// response doesn't have the key: dog
 console.log("old way of get name: ", response && response.dog && response.dog.name); // undefined
 console.log("get name with optional chaining: ", response?.dog?.name); // undefined
 
-console.log("test or: ", response?.dog?.name || "obj does not exist"); // obj not exist
+console.log("test or: ", response?.dog?.name || "obj does not exist"); // obj does not exist
 console.log("test nullish-coalescing: ", response?.dog?.name ?? "obj does not exist"); // obj does not exist
 
 const responseWithSurname = {
